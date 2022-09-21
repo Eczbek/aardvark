@@ -10,11 +10,10 @@ Aardvark::AdkScope* globals = new Aardvark::AdkScope();
 
 Aardvark::AdkValue* print(const std::vector<Aardvark::AdkValue*>& args) {
 	const std::size_t argsSize = args.size();
-	if (argsSize) {
-		std::cout << args[0]->toString();
-		for (std::size_t i = 1; i < argsSize; ++i) {
-			std::cout << ' ' << args[i]->toString();
-		}
+	if (argsSize)
+	std::cout << args[0]->toString();
+	for (std::size_t i = 1; i < argsSize; ++i) {
+		std::cout << ' ' << args[i]->toString();
 	}
 	std::cout << '\n';
 	return new Aardvark::AdkValue();
